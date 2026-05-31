@@ -137,19 +137,14 @@ nav a.cta:hover {
 }
 
 .badge {
-    border: 1px solid #444;
+    border: 1px solid var(--red);
     padding: 5px 12px;
     border-radius: 20px;
     font-size: 0.72rem;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.5px;
-    color: var(--gray);
-}
-
-.badge-purple {
-    border-color: var(--purple);
-    color: var(--purple);
+    color: var(--red);
 }
 
 .hero-p {
@@ -559,6 +554,44 @@ footer .footer-links {
 
 .read-more:hover {
     opacity: 0.7;
+}
+
+/* ── POST EXPANDER ── */
+.post-expander {
+    margin-top: 16px;
+}
+
+.post-expander summary {
+    display: inline-block;
+    cursor: pointer;
+    font-size: 0.82rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--red);
+    border-bottom: 1px solid var(--red);
+    padding-bottom: 1px;
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+.post-expander summary::-webkit-details-marker {
+    display: none;
+}
+
+.post-expander summary::after {
+    content: ' →';
+}
+
+.post-expander[open] summary::after {
+    content: ' ↑';
+}
+
+.post-expander p {
+    color: var(--gray);
+    font-size: 0.98rem;
+    line-height: 1.8;
+    margin-bottom: 14px;
 }
 
 /* ── RESPONSIVE ── */

@@ -144,7 +144,11 @@ nav a.cta:hover {
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.5px;
-    color: var(--red);
+    color: var(--gray);
+}
+
+.badge-purple {
+    border-color: var(--purple);
 }
 
 .hero-p {

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thanks — Kat Voboril</title>
+    <meta name="robots" content="noindex">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .thankyou-wrap {
+            min-height: 70vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 80px 24px;
+        }
+        .thankyou-wrap h1 {
+            font-family: var(--font-serif);
+            font-size: 3rem;
+            color: var(--purple);
+            margin-bottom: 16px;
+        }
+        .thankyou-wrap p {
+            color: var(--gray);
+            font-size: 1.05rem;
+            max-width: 480px;
+            margin: 0 auto 32px;
+            line-height: 1.7;
+        }
+        .back-link {
+            display: inline-block;
+            border: 1px solid var(--red);
+            color: var(--red);
+            padding: 10px 24px;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: all 0.2s;
+        }
+        .back-link:hover {
+            background: var(--red);
+            color: var(--white);
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container nav-wrapper">
+        <a href="index.html" class="logo">KV</a>
+        <button class="nav-toggle" aria-label="Toggle navigation" onclick="this.nextElementSibling.classList.toggle('open')">☰</button>
+        <nav>
+            <a href="index.html#about">Bio</a>
+            <a href="index.html#reels">The Reels</a>
+            <a href="index.html#avenues">Avenues</a>
+            <a href="blog.html">Stories</a>
+            <a href="resume.pdf" target="_blank" rel="noopener">Résumé</a>
+            <a href="index.html#booking" class="cta">Book Kat</a>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <div class="thankyou-wrap">
+        <div>
+            <h1>Thank you.</h1>
+            <p>Your inquiry is in — Kat will be in touch soon. In the meantime, feel free to browse the reels or read a story or two.</p>
+            <a href="index.html" class="back-link">Back to the site</a>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <div class="container">
+        <div class="footer-links">
+            <a href="index.html#about">Bio</a>
+            <a href="index.html#reels">The Reels</a>
+            <a href="index.html#avenues">Avenues</a>
+            <a href="blog.html">Stories</a>
+            <a href="index.html#booking">Book Kat</a>
+            <a href="https://www.youtube.com/@KatVoboril" target="_blank" rel="noopener">YouTube</a>
+        </div>
+        <p>© 2026 Kat Voboril. Portland, OR. All rights reserved.</p>
+    </div>
+</footer>
+
+</body>
+</html>

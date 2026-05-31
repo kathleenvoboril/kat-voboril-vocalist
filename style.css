@@ -6,6 +6,7 @@
     --white: #FFFFFF;
     --font-serif: 'Playfair Display', Georgia, serif;
     --font-sans: 'Inter', sans-serif;
+    --purple: #A78BFA;
 }
 
 * {
@@ -144,6 +145,11 @@ nav a.cta:hover {
     text-transform: uppercase;
     letter-spacing: 0.5px;
     color: var(--gray);
+}
+
+.badge-purple {
+    border-color: var(--purple);
+    color: var(--purple);
 }
 
 .hero-p {
@@ -313,9 +319,9 @@ section + section {
 }
 
 .pillar-icon {
-    font-size: 2rem;
-    margin-bottom: 14px;
-    display: block;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 16px;
 }
 
 .pillar-card h3 {
@@ -415,7 +421,7 @@ section + section {
 .form-field select:focus,
 .form-field textarea:focus {
     outline: none;
-    border-color: var(--red);
+    border-color: var(--purple);
 }
 
 .form-field select option {
@@ -428,7 +434,7 @@ section + section {
 }
 
 .submit-btn {
-    background: var(--red);
+    background: var(--purple);
     color: var(--white);
     border: none;
     padding: 14px 32px;

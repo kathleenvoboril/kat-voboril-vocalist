@@ -301,6 +301,20 @@ section + section {
     font-size: 0.95rem;
 }
 
+.ribbon-meta {
+    font-size: 0.82rem;
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 14px !important;
+}
+
+.ribbon-credits {
+    font-size: 0.8rem;
+    color: #666;
+    margin-top: 14px !important;
+}
+
 /* ── PILLARS ── */
 .pillars {
     display: grid;

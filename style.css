@@ -301,6 +301,14 @@ section + section {
     font-size: 0.95rem;
 }
 
+.ribbon-role {
+    font-size: 0.9rem;
+    color: #aaa;
+    font-style: italic;
+    margin-top: -6px !important;
+    margin-bottom: 10px !important;
+}
+
 .ribbon-meta {
     font-size: 0.82rem;
     color: #888;
@@ -310,9 +318,17 @@ section + section {
 }
 
 .ribbon-credits {
-    font-size: 0.8rem;
+    font-size: 0.82rem;
     color: #666;
     margin-top: 14px !important;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.ribbon-credits strong {
+    color: #999;
+    margin-right: 6px;
 }
 
 /* ── PILLARS ── */

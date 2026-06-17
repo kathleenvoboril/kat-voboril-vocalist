@@ -17,7 +17,9 @@
 <header>
     <div class="container nav-wrapper">
         <a href="index.html" class="logo">KV</a>
-        <button class="nav-toggle" aria-label="Toggle navigation" onclick="this.nextElementSibling.classList.toggle('open')">☰</button>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+            <span></span><span></span><span></span>
+        </button>
         <nav>
             <a href="#about">Bio</a>
             <a href="#reels">The Reels</a>
@@ -220,6 +222,19 @@
         <p>© 2026 Kat Voboril. Portland, OR. All rights reserved.</p>
     </div>
 </footer>
+
+<script>
+const navToggle = document.getElementById('navToggle');
+const nav = navToggle.nextElementSibling;
+navToggle.addEventListener('click', () => {
+    navToggle.classList.toggle('open');
+    nav.classList.toggle('open');
+});
+nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    navToggle.classList.remove('open');
+    nav.classList.remove('open');
+}));
+</script>
 
 </body>
 </html>

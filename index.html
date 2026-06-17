@@ -51,7 +51,7 @@
                 <p class="hero-location"><span>📍</span> Portland, OR</p>
             </div>
             <div>
-                <img src="headshot.png" alt="Kat Voboril" style="width:100%; border-radius:8px; box-shadow:0 20px 50px rgba(0,0,0,0.6);">
+                <img src="headshot.jpg" alt="Kat Voboril" style="width:100%; border-radius:8px; box-shadow:0 20px 50px rgba(0,0,0,0.6);" loading="eager">
             </div>
         </div>
     </section>
@@ -63,7 +63,10 @@
             <div class="video-grid">
 
                 <div class="video-card">
-                    <iframe src="https://www.youtube.com/embed/2Ey8sILXakg" title="The Star Spangled Banner" allowfullscreen></iframe>
+                    <div class="video-thumb" data-videoid="2Ey8sILXakg">
+                        <img src="https://i.ytimg.com/vi/2Ey8sILXakg/maxresdefault.jpg" alt="National Anthem & Ceremonies" loading="lazy">
+                        <button class="play-btn" aria-label="Play video">&#9654;</button>
+                    </div>
                     <div class="video-card-body">
                         <h3>National Anthem &amp; Ceremonies</h3>
                         <p>The Star Spangled Banner — and more patriotic and ceremonial repertoire for sporting arenas, galas, and military honors.</p>
@@ -72,7 +75,10 @@
                 </div>
 
                 <div class="video-card">
-                    <iframe src="https://www.youtube.com/embed/Z2S1dYNj56c" title="Custom Lyric Performances" allowfullscreen></iframe>
+                    <div class="video-thumb" data-videoid="Z2S1dYNj56c">
+                        <img src="https://i.ytimg.com/vi/Z2S1dYNj56c/maxresdefault.jpg" alt="Custom Lyric Performances" loading="lazy">
+                        <button class="play-btn" aria-label="Play video">&#9654;</button>
+                    </div>
                     <div class="video-card-body">
                         <h3>Custom Lyric Performances</h3>
                         <p>Original songs written for your event — fundraisers, retirement sendoffs, galas. Familiar melodies, new words, fully human-crafted and performed live.</p>
@@ -81,7 +87,10 @@
                 </div>
 
                 <div class="video-card">
-                    <iframe src="https://www.youtube.com/embed/dLGW-fJJzpE" title="Amazing Grace" allowfullscreen></iframe>
+                    <div class="video-thumb" data-videoid="dLGW-fJJzpE">
+                        <img src="https://i.ytimg.com/vi/dLGW-fJJzpE/maxresdefault.jpg" alt="Sacred & Ceremonial Repertoire" loading="lazy">
+                        <button class="play-btn" aria-label="Play video">&#9654;</button>
+                    </div>
                     <div class="video-card-body">
                         <h3>Sacred &amp; Ceremonial Repertoire</h3>
                         <p>Amazing Grace — and thoughtful, respectful selections for memorials, celebrations of life, and intimate ceremonies.</p>
@@ -90,7 +99,10 @@
                 </div>
 
                 <div class="video-card">
-                    <iframe src="https://www.youtube.com/embed/8LZLbJ1ElGg" title="PATA Audition" allowfullscreen></iframe>
+                    <div class="video-thumb" data-videoid="8LZLbJ1ElGg">
+                        <img src="https://i.ytimg.com/vi/8LZLbJ1ElGg/maxresdefault.jpg" alt="Musical Theatre & Casting" loading="lazy">
+                        <button class="play-btn" aria-label="Play video">&#9654;</button>
+                    </div>
                     <div class="video-card-body">
                         <h3>Musical Theatre &amp; Casting</h3>
                         <p>PATA audition — professional showcase of stage range, from legit soprano to belt.</p>
@@ -224,6 +236,19 @@
 </footer>
 
 <script>
+document.querySelectorAll('.video-thumb').forEach(thumb => {
+    thumb.addEventListener('click', () => {
+        const id = thumb.dataset.videoid;
+        const iframe = document.createElement('iframe');
+        iframe.src = `https://www.youtube.com/embed/${id}?autoplay=1`;
+        iframe.title = thumb.querySelector('img').alt;
+        iframe.allowFullscreen = true;
+        iframe.allow = 'autoplay; encrypted-media';
+        iframe.style.cssText = 'width:100%;aspect-ratio:16/9;display:block;border:none;';
+        thumb.replaceWith(iframe);
+    });
+});
+
 const navToggle = document.getElementById('navToggle');
 const nav = navToggle.nextElementSibling;
 navToggle.addEventListener('click', () => {

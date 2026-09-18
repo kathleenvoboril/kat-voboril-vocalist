@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Building Bonnie: Grief, Belief, and the Work of Developing a New Musical | Kat Voboril</title>
+    <meta name="description" content="Actor Kat Voboril shares how a five-stage grief framework shaped her performance as Bonnie in the developmental workshop of Among the Stars.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* ── ARTICLE PAGE ── */
+        .article-header {
+            padding: 70px 0 50px;
+            border-bottom: 1px solid #1e1e1e;
+        }
+
+        .article-header .post-tag {
+            margin-bottom: 18px;
+        }
+
+        .article-title {
+            font-family: var(--font-serif);
+            font-size: 2.8rem;
+            line-height: 1.15;
+            color: var(--white);
+            margin-bottom: 18px;
+            max-width: 820px;
+        }
+
+        .article-excerpt {
+            color: var(--gray);
+            font-size: 1.08rem;
+            line-height: 1.7;
+            max-width: 680px;
+            margin-bottom: 20px;
+        }
+
+        .article-meta {
+            font-size: 0.78rem;
+            color: #666;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* ── ARTICLE BODY ── */
+        .article-body {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 64px 24px 80px;
+        }
+
+        .article-body p {
+            color: var(--gray);
+            font-size: 1rem;
+            line-height: 1.85;
+            margin-bottom: 20px;
+        }
+
+        .article-body h2 {
+            font-family: var(--font-serif);
+            font-size: 1.75rem;
+            color: var(--white);
+            margin: 52px 0 18px;
+            line-height: 1.2;
+        }
+
+        .article-body h3 {
+            font-family: var(--font-serif);
+            font-size: 1.3rem;
+            color: var(--white);
+            margin: 40px 0 14px;
+            line-height: 1.25;
+        }
+
+        .article-body em {
+            font-style: italic;
+        }
+
+        .article-body a {
+            color: var(--purple);
+            border-bottom: 1px solid var(--purple);
+            padding-bottom: 1px;
+            transition: opacity 0.2s;
+        }
+
+        .article-body a:hover {
+            opacity: 0.75;
+        }
+
+        /* ── VIMEO EMBED ── */
+        .video-embed {
+            margin: 36px 0;
+        }
+
+        .video-embed-frame {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 6px;
+            background: #111;
+        }
+
+        .video-embed-frame iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .video-caption {
+            margin-top: 10px;
+            font-size: 0.82rem;
+            color: #666;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            text-align: center;
+        }
+
+        /* ── INFOGRAPHIC ── */
+        .infographic-figure {
+            margin: 36px 0;
+            text-align: center;
+        }
+
+        .infographic-thumb {
+            display: inline-block;
+            max-width: 480px;
+            width: 100%;
+            border-radius: 6px;
+            overflow: hidden;
+            border: 1px solid #2a2a2a;
+            cursor: pointer;
+            transition: border-color 0.2s;
+        }
+
+        .infographic-thumb:hover {
+            border-color: #444;
+        }
+
+        .infographic-thumb img {
+            width: 100%;
+            display: block;
+        }
+
+        .infographic-label {
+            display: inline-block;
+            margin-top: 10px;
+            font-size: 0.78rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: var(--red);
+            border-bottom: 1px solid var(--red);
+            padding-bottom: 1px;
+        }
+
+        /* ── CTA BLOCK ── */
+        .article-cta {
+            margin-top: 56px;
+            padding-top: 40px;
+            border-top: 1px solid #1e1e1e;
+            color: var(--gray);
+            font-size: 0.98rem;
+            line-height: 1.8;
+        }
+
+        .article-cta a {
+            color: var(--purple);
+            border-bottom: 1px solid var(--purple);
+            padding-bottom: 1px;
+        }
+
+        /* ── BACK LINK ── */
+        .back-link {
+            display: inline-block;
+            font-size: 0.78rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: #666;
+            margin-bottom: 28px;
+            transition: color 0.2s;
+        }
+
+        .back-link:hover {
+            color: var(--white);
+        }
+
+        /* ── LIGHTBOX ── */
+        .lightbox-overlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.92);
+            z-index: 200;
+            overflow-y: auto;
+            -webkit-overflow-scrolling: touch;
+            padding: 60px 24px 40px;
+        }
+
+        .lightbox-overlay.open {
+            display: block;
+        }
+
+        .lightbox-img {
+            display: block;
+            width: 100%;
+            max-width: 860px;
+            margin: 0 auto;
+            border-radius: 4px;
+        }
+
+        .lightbox-close {
+            position: fixed;
+            top: 16px;
+            right: 20px;
+            background: rgba(0,0,0,0.6);
+            border: 1px solid #444;
+            border-radius: 4px;
+            color: #fff;
+            font-size: 1.4rem;
+            cursor: pointer;
+            line-height: 1;
+            padding: 4px 10px;
+            opacity: 0.85;
+            transition: opacity 0.2s;
+            z-index: 201;
+        }
+
+        .lightbox-close:hover {
+            opacity: 1;
+        }
+
+        @media (max-width: 768px) {
+            .article-title {
+                font-size: 2rem;
+            }
+
+            .infographic-thumb {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container nav-wrapper">
+        <a href="index.html" class="logo">KV</a>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+            <span></span><span></span><span></span>
+        </button>
+        <nav>
+            <a href="index.html#about">Bio</a>
+            <a href="index.html#reels">The Reels</a>
+            <a href="index.html#avenues">Avenues</a>
+            <a href="blog.html" style="color:var(--red)">Stories</a>
+            <a href="resume.pdf" target="_blank" rel="noopener">Résumé</a>
+            <a href="index.html#booking" class="cta">Book Kat</a>
+        </nav>
+    </div>
+</header>
+
+<div class="container article-header">
+    <a href="blog.html" class="back-link">← Stories</a>
+    <span class="post-tag">New Work</span>
+    <h1 class="article-title">Building Bonnie: Grief, Belief, and the Work of Developing a New Musical</h1>
+    <p class="article-excerpt">During a two-week developmental workshop of <em>Among the Stars</em>, one note about the five stages of grief unlocked Bonnie's journey from certainty to agency.</p>
+    <p class="article-meta">August 2026 &middot; Bridgetown Conservatory, Portland OR</p>
+</div>
+
+<div class="article-body">
+
+    <p>For two weeks in August, I had the rare opportunity to help develop a brand-new musical.</p>
+
+    <p><a href="https://amongthestarsmusical.com/" target="_blank" rel="noopener"><em>Among the Stars</em></a> takes place in the West Texas desert on December 20, 2012, the day before the end of the Mayan calendar. A small group of believers awaits extraterrestrials who they are certain will rescue them before the world ends. Then a documentary crew arrives, a lost young man wanders into their compound, and the group's convictions begin to unravel.</p>
+
+    <p>I played Bonnie, the Captain's wife and closest partner.</p>
+
+    <p>At first, I approached her belief as something firm and uncomplicated. Bonnie had built her life around the Captain, the community and the promise that they would become ambassadors to the stars. She was organized, capable and completely committed.</p>
+
+    <p>But Bonnie's certainty could not simply disappear when doubt arrived. She had too much invested in it.</p>
+
+    <p>That became the key to understanding her.</p>
+
+    <h2>What It Means to Develop a New Musical</h2>
+
+    <p>Working on a developmental workshop differs completely from joining a finished production.</p>
+
+    <p>You do not receive a polished script, learn your part and execute an established vision. You sit in a room with the writers, director, music director and other actors. You ask questions. You explore what the creators intended, what the audience needs and what the material actually does when living, breathing people perform it.</p>
+
+    <p>Sometimes the answer changes the acting.</p>
+
+    <p>Sometimes it changes the script.</p>
+
+    <p>Sometimes everyone changes their minds together.</p>
+
+    <p>That process requires humility, openness and flexibility. It also gives an actor an extraordinary gift: the opportunity to help discover who a character is before the answers become fixed.</p>
+
+    <h2>The Note That Unlocked Bonnie</h2>
+
+    <p>During rehearsal, co-creator Aaron Kirk Douglas suggested that Bonnie might be moving through the five stages of grief: denial, anger, bargaining, depression and acceptance.</p>
+
+    <p>Not necessarily in order.</p>
+
+    <p>Not necessarily one stage at a time.</p>
+
+    <p>That distinction mattered. Bonnie was not progressing neatly through five emotional checkpoints. She could circle backward, experience several stages within one scene or reveal only a flash of what was happening underneath.</p>
+
+    <p>Aaron pointed to specific moments. Perhaps anger surfaced briefly during the line, "If silence is the answer, friend." Perhaps the Bonnie we encountered at the bus stop was depressed. Perhaps <em>Unsinkable</em> represented a form of acceptance for both Bonnie and the Captain.</p>
+
+    <p>Then Aaron shared something more personal. He had spent 25 years following an Indian guru before eventually confronting the question: What am I doing? Enlightenment isn't coming.</p>
+
+    <p>Suddenly, Bonnie's story felt much larger and much more human.</p>
+
+    <p>She was not simply grieving the possibility that aliens were not coming. She was grieving a way of life, the future she expected and the identity she had built inside that belief.</p>
+
+    <p>Her deepest fear was not, <em>I was wrong.</em></p>
+
+    <p>It was: <em>The person I became here can no longer survive unchanged.</em></p>
+
+    <h2>Naturally, I Made an Infographic</h2>
+
+    <p>I did what any perfectly normal actor with a marketing brain would do: I turned the note into an infographic.</p>
+
+    <p>With help from ChatGPT, I began translating each stage from an abstract emotional label into two practical questions:</p>
+
+    <p>What is Bonnie telling herself?<br>What action can I play?</p>
+
+    <p>That second question kept the work active. "Be sad" gives an actor very little to do. <em>Protect the structure. Push the danger outward. Negotiate with reality. Stop fighting the loss. Choose without certainty.</em> Those are playable actions.</p>
+
+    <figure class="infographic-figure">
+        <a href="#" class="infographic-thumb" id="infographicThumb">
+            <img src="bonnie-five-stages-of-grief.png" alt="Bonnie's five stages of grief acting map, pairing her inner voice with playable actions for denial, anger, bargaining, depression and acceptance." loading="lazy">
+        </a>
+        <figcaption>
+            <a href="#" class="infographic-label" id="infographicLabel">View Bonnie's complete five-stage acting map</a>
+        </figcaption>
+    </figure>
+
+    <p>I used the infographic as a working document throughout rehearsal. The five sections below follow that map, pairing Bonnie's inner experience with the actions I could actually play.</p>
+
+    <h3>Denial: Protect the Structure</h3>
+
+    <p>Bonnie begins by reinforcing the world she knows.</p>
+
+    <p>The Captain understands. The promise still holds. If she maintains the routines and keeps everyone focused, nothing fundamental has changed.</p>
+
+    <p>Denial did not make Bonnie foolish. It made her efficient. She brightened, organized and reassured because certainty protected her from facts that might rearrange her entire life.</p>
+
+    <p>You can see that Bonnie in <em>Ambassador to the Stars</em>, dreaming with the Captain about the future they believe awaits them.</p>
+
+    <div class="video-embed">
+        <div class="video-embed-frame">
+            <iframe
+                src="https://player.vimeo.com/video/1227540144?h=dd6f077ef8&title=0&byline=0&portrait=0"
+                title="Ambassador to the Stars, Among the Stars workshop performance"
+                allow="autoplay; fullscreen; picture-in-picture"
+                allowfullscreen
+                loading="lazy">
+            </iframe>
+        </div>
+        <p class="video-caption"><em>Ambassador to the Stars</em></p>
+    </div>
+
+    <h3>Anger: Push the Danger Outward</h3>
+
+    <p>As doubt enters the compound, Bonnie initially directs her anger away from herself.</p>
+
+    <p>How dare people question them? How dare the Captain fail her? How dare Bonnie herself entertain doubt after everything she has sacrificed?</p>
+
+    <p>Aaron's note helped me resist playing an entire scene as angry. The more interesting choice was allowing the heat to break through for only a moment before Bonnie regained control.</p>
+
+    <p>Anger protected her from terror.</p>
+
+    <h3>Bargaining: Try to Save It</h3>
+
+    <p>Bonnie's competence becomes a form of bargaining.</p>
+
+    <p>If she believes harder, remains useful and holds everyone together, perhaps she can preserve enough of this life to survive. She explains, pleads and tries to repair. She negotiates with a reality that has already begun to change.</p>
+
+    <p>That struggle sits at the center of my solo, <em>Don't Know That I Believe</em>.</p>
+
+    <p>This was my largest musical moment in the show and the place where Bonnie could no longer contain the conflict between what she had promised to believe and what she had begun to see.</p>
+
+    <div class="video-embed">
+        <div class="video-embed-frame">
+            <iframe
+                src="https://player.vimeo.com/video/1227599906?h=711eee66f0&title=0&byline=0&portrait=0"
+                title="Don't Know That I Believe, Among the Stars workshop performance"
+                allow="autoplay; fullscreen; picture-in-picture"
+                allowfullscreen
+                loading="lazy">
+            </iframe>
+        </div>
+        <p class="video-caption"><em>Don't Know That I Believe</em></p>
+    </div>
+
+    <p>At the workshop talkback, audience members described the song as haunting and moving. That meant a great deal to me because I did not want Bonnie's crisis to feel like a sudden rejection of everything that came before it.</p>
+
+    <p>Her belief gave her community, purpose and love. Losing it hurt because it mattered.</p>
+
+    <h3>Depression: Stop Fighting the Loss</h3>
+
+    <p>At the bus stop, Bonnie no longer has the energy to organize, correct or persuade.</p>
+
+    <p>If the rescue is not real, who is she? Where does she go? What did she give up to become this person?</p>
+
+    <p>The playable action became almost the absence of action: withdraw, slow down and allow silence to land.</p>
+
+    <p>Bonnie was grieving more than a failed prediction. She was grieving belonging, purpose and the future self she expected to become.</p>
+
+    <h3>Acceptance: Choose Without Certainty</h3>
+
+    <p>Acceptance did not mean Bonnie suddenly felt peaceful.</p>
+
+    <p>It meant she reclaimed agency.</p>
+
+    <p>The old story might be ending, but Bonnie remained. She could see more clearly, trust her own voice and take one honest step without knowing exactly where it would lead.</p>
+
+    <p>That is what I found in <em>Unsinkable</em>.</p>
+
+    <div class="video-embed">
+        <div class="video-embed-frame">
+            <iframe
+                src="https://player.vimeo.com/video/1227774435?h=eb177ba586&title=0&byline=0&portrait=0"
+                title="Unsinkable, Among the Stars workshop performance"
+                allow="autoplay; fullscreen; picture-in-picture"
+                allowfullscreen
+                loading="lazy">
+            </iframe>
+        </div>
+        <p class="video-caption"><em>Unsinkable</em></p>
+    </div>
+
+    <p>Acceptance was not certainty restored. It was Bonnie realizing she could continue without it.</p>
+
+    <h2>The Gift of the Workshop</h2>
+
+    <p>By the time we presented the reading on August 23, Bonnie felt completely different from the character I thought I had met two weeks earlier.</p>
+
+    <p>That transformation came from collaboration: Aaron sharing the personal experience beneath the story; director Bruce Akpan Hostetler helping us ground the show's stranger circumstances in recognizable human behavior; playwright Joel Cobbs continuing to refine the book; music director Barney Stein helping us uncover the score; and eight actors listening, questioning and building together.</p>
+
+    <p>The subject of <em>Among the Stars</em> is unusual. Its emotional center is not.</p>
+
+    <p>What happens when the story you built your life around stops holding?</p>
+
+    <p>What remains when certainty disappears?</p>
+
+    <p>And how do you begin again without pretending the loss did not matter?</p>
+
+    <p>Developing Bonnie reminded me why I love new work. An actor rarely gets to stand this close to the point where a character takes shape. It was challenging, joyful and deeply humbling to help discover her.</p>
+
+    <p>Bonnie does not end the show with all the answers.</p>
+
+    <p>She ends it with something better: her own voice.</p>
+
+    <p class="article-cta">Explore the music, workshop performances and continuing development of <a href="https://amongthestarsmusical.com/" target="_blank" rel="noopener"><em>Among the Stars</em></a>.</p>
+
+</div>
+
+<!-- Lightbox -->
+<div class="lightbox-overlay" id="lightbox">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Close">&times;</button>
+    <img class="lightbox-img" src="bonnie-five-stages-of-grief.png" alt="Bonnie's five stages of grief acting map" id="lightboxImg">
+</div>
+
+<footer>
+    <div class="container">
+        <div class="footer-links">
+            <a href="index.html#about">Bio</a>
+            <a href="index.html#reels">The Reels</a>
+            <a href="index.html#avenues">Avenues</a>
+            <a href="blog.html">Stories</a>
+            <a href="index.html#booking">Book Kat</a>
+            <a href="https://www.youtube.com/@KatVoboril" target="_blank" rel="noopener">YouTube</a>
+        </div>
+        <p>© 2026 Kat Voboril. Portland, OR. All rights reserved.</p>
+    </div>
+</footer>
+
+<script>
+// Nav toggle
+const navToggle = document.getElementById('navToggle');
+const nav = navToggle.nextElementSibling;
+navToggle.addEventListener('click', () => {
+    navToggle.classList.toggle('open');
+    nav.classList.toggle('open');
+});
+nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    navToggle.classList.remove('open');
+    nav.classList.remove('open');
+}));
+
+// Infographic lightbox
+const lightbox = document.getElementById('lightbox');
+const lightboxClose = document.getElementById('lightboxClose');
+function openLightbox(e) {
+    e.preventDefault();
+    lightbox.classList.add('open');
+    lightbox.scrollTop = 0;
+    document.body.style.overflow = 'hidden';
+}
+function closeLightbox() {
+    lightbox.classList.remove('open');
+    document.body.style.overflow = '';
+}
+document.getElementById('infographicThumb').addEventListener('click', openLightbox);
+document.getElementById('infographicLabel').addEventListener('click', openLightbox);
+lightboxClose.addEventListener('click', closeLightbox);
+lightbox.addEventListener('click', e => { if (e.target === lightbox) closeLightbox(); });
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+</script>
+
+</body>
+</html>

@@ -10,6 +10,9 @@ Visual and content refinements to revisit when time allows. Not blockers for lau
 ## Videos
 - **Custom YouTube thumbnails** — Replace iframes with custom thumbnail images; load the actual YouTube player on click. Gives full visual control over the "cluttered" default thumbnail look.
 
+## Forms
+- **Netlify form testing** — Verify the Book Kat form submissions are actually landing in Netlify dashboard and triggering email notifications. Test the full flow end-to-end once the custom domain is live and SSL is provisioned (Netlify Forms requires a deployed site, not local).
+
 ---
 
 ## Later / Bigger Lifts
